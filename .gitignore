@@ -1,0 +1,18 @@
+# Real config with credentials
+.mcp-clickhouse-config.json
+
+# Generated exports
+exportDatabaseSql/
+
+# Local builds
+mcp-clickhouse.exe
+mcp-clickhouse.exe~
+mcp-clickhouse.exe.old
+mcp-clickhouse
+mcp-clickhouse-mac
+
+# Per-user Claude Code settings
+.claude/settings.local.json
+
+# Shell crash dumps
+*.stackdump

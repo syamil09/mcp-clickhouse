@@ -1,0 +1,78 @@
+{
+  "connections": {
+    "dev": {
+      "server": "localhost",
+      "port": 9000,
+      "protocol": "native",
+      "secure": false,
+      "database": "YOUR_DEV_DATABASE",
+      "user": "YOUR_DEV_USERNAME",
+      "password": "YOUR_DEV_PASSWORD",
+      "connection_timeout": 30,
+      "query_timeout": 60,
+      "blocked_tables": [
+        "users",
+        "user_sessions",
+        "audit_log",
+        "api_keys",
+        "system.query_log"
+      ],
+      "sensitive_columns": [
+        "password",
+        "password_hash",
+        "salary",
+        "token",
+        "secret",
+        "credit_card",
+        "pin",
+        "api_key"
+      ],
+      "max_rows": 200,
+      "default": true
+    },
+    "prod": {
+      "server": "YOUR_PROD_SERVER",
+      "port": 9440,
+      "protocol": "native",
+      "secure": true,
+      "skip_verify": false,
+      "database": "YOUR_PROD_DATABASE",
+      "user": "YOUR_PROD_USERNAME",
+      "password": "YOUR_PROD_PASSWORD",
+      "connection_timeout": 30,
+      "query_timeout": 60,
+      "blocked_tables": [
+        "users",
+        "user_sessions",
+        "audit_log",
+        "api_keys",
+        "system.query_log"
+      ],
+      "sensitive_columns": [
+        "password",
+        "password_hash",
+        "salary",
+        "token",
+        "secret",
+        "credit_card",
+        "pin",
+        "api_key"
+      ],
+      "max_rows": 50,
+      "default": false
+    },
+    "cloud": {
+      "server": "YOUR_INSTANCE.clickhouse.cloud",
+      "port": 8443,
+      "protocol": "http",
+      "secure": true,
+      "database": "default",
+      "user": "default",
+      "password": "YOUR_CLOUD_PASSWORD",
+      "max_rows": 100,
+      "default": false
+    }
+  },
+  "output_format": "toon",
+  "export_max_rows": 10000
+}

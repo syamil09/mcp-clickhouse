@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "clickhouse": {
+      "command": "./mcp-clickhouse.exe"
+    }
+  }
+}
